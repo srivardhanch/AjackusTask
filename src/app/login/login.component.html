@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="admin-login">
+    <div class="admin-logo">
+      <img src="assets/images/requestSignup.png">
+
+    </div>
+    <div style="text-align: center;">
+      <p>Please confirm or edit your contact information, so that we can<br><span>notify you when you are
+          approved for our BETA.</span></p>
+    </div>
+    <hr>
+    <div class=" mt-5">
+      <div class="">
+        <div class="admin-sign-in-form">
+
+          <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" style="text-align: left;">
+            <div class="form-group">
+              <label style="font-size: 10px;">NAME</label>
+              <input type="text" formControlName="firstName" class="form-control bg-bl" disabled='true'
+                [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+              <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                <div *ngIf="f.firstName.errors.required">First Name is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label style="font-size: 10px;">EMAIL ADDRESS</label>
+              <input type="email" formControlName="email" class="form-control bg-bl" disabled='true'
+                [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required">Email is required</div>
+
+              </div>
+            </div>
+            <div class="form-group">
+              <label style="font-size: 10px;">PHONE NUMBER</label>
+              <input type="number" formControlName="number" class="form-control" style="color: black"
+                [ngClass]="{ 'is-invalid': submitted && f.number.errors }" />
+              <div *ngIf="submitted && f.number.errors" class="invalid-feedback">
+                <div *ngIf="f.number.errors.required">Mobile number is required</div>
+              </div>
+
+            </div>
+            <hr class="mt-5">
+            <div class="form-group  forgot-pass">
+
+              <button type="submit" class="btn btn-outline-danger" style=" width: 40%;">SIGN UP</button>
+            </div>
+
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

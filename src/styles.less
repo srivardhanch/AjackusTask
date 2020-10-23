@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "SF-Compact-Display-Bold";
+    src: local("SF-Compact-Display-Bold"), url(./assets/fonts/SF-Compact-Display-Bold.otf) format("truetype");
+}
+@font-face {
+    font-family: "SF-Compact-Display-Regular";
+    src: local("SF-Compact-Display-Regular"), url(./assets/fonts/SF-Compact-Display-Regular.otf) format("truetype");
+}
+*{
+    font-family: SF-Compact-Display-Bold;
+}
+.admin-login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  
+    .admin-logo {
+        text-align: center;
+       img{
+        width: 100%;
+       }
+    }
+    .admin-sign-in-form {
+        p{
+            font-family: SF-Compact-Display-Regular;
+            margin-top: 20px;
+        }
+        h1{
+            color: red;
+        }
+        background: #fff;
+        text-align: center;
+        
+        .form-group {            
+            .bg-bl{
+                background-color: black;
+            }         
+        }        
+    }
+}
+
+.forgot-pass{   
+font-family: IBM Plex Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 15px;
+text-align: center;
+text-decoration-line: underline;
+color: #DD2C00;
+}
